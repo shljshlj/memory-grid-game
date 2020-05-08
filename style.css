@@ -9,3 +9,36 @@ body {
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.site-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  padding: 0 5vw;
+}
+
+.game-area {
+  flex-grow: 1;
+  background-color: #e0d7e3;
+  padding: 10vh 5vw;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 2%;
+  width: 90vw;
+  height: 90vw;
+  min-width: calc(300px - 10vw);
+  min-height: calc(300px - 10vw);
+  max-width: 600px;
+  max-height: 600px;
+}
+
+.cell {
+  background-color: #fff;
+}
