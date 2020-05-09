@@ -11,38 +11,34 @@
       <header class="site-header">
         <h1>Memory Grid Game</h1>
       </header>
-
-      <section class="game-area">
-        <div id="board" class="board">
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-        </div>
-      </section>
+      <main class="site-content">
+        <section class="game-instructions">
+          <h2>How to play</h2>
+          <p>
+            In this memory game, colored squares are displayed on a grid for a
+            limited time during which the player try to memorize the locations
+            of the squares. When the chronometer stops, the colored squares
+            automatically disappear and the player have to find the right
+            locations by clicking on the empty squares. When the player feels he
+            had correctly repositioned all the squares, he can then click on the
+            "CHECK" button to see his result.
+          </p>
+        </section>
+        <section class="game-area">
+          <div id="board" class="board"></div>
+        </section>
+      </main>
     </div>
 
-    <script src="./script.js"></script>
+    <script type="module">
+      import { init } from './src/app.js';
+
+      document.addEventListener('DOMContentLoaded', function (event) {
+        console.log('DOM fully loaded and parsed');
+        console.log('Init app');
+
+        init();
+      });
+    </script>
   </body>
 </html>

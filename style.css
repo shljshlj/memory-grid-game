@@ -8,6 +8,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  color: rgb(74, 74, 74);
+}
+
+h1,
+h2 {
+  color: rgb(32, 64, 86);
 }
 
 .site-container {
@@ -20,10 +26,32 @@ body {
   padding: 0 5vw;
 }
 
-.game-area {
+.site-content {
   flex-grow: 1;
+  display: flex;
   background-color: #e0d7e3;
+}
+
+.game-instructions {
   padding: 10vh 5vw;
+  width: 30vw;
+}
+
+.game-area {
+  padding: 10vh 5vw;
+  width: 70vw;
+}
+
+@media only screen and (min-width: 1400px) {
+  .game-instructions {
+    padding: 10vh 5vw;
+    width: 50vw;
+  }
+
+  .game-area {
+    padding: 10vh 5vw;
+    width: 50vw;
+  }
 }
 
 .board {
@@ -41,4 +69,51 @@ body {
 
 .cell {
   background-color: #fff;
+}
+
+.cell.colored {
+  background-color: #000;
+}
+
+@media only screen and (max-width: 992px) {
+  .board {
+    width: 60vw;
+    height: 60vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .game-instructions {
+    width: 40vw;
+  }
+
+  .game-area {
+    width: 60vw;
+  }
+
+  .board {
+    width: 50vw;
+    height: 50vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .site-content {
+    flex-direction: column;
+  }
+
+  .game-instructions {
+    padding: 5vh 5vw;
+    width: 100%;
+  }
+
+  .game-area {
+    padding: 5vh 5vw;
+    width: 100%;
+  }
+
+  .board {
+    width: 90vw;
+    height: 90vw;
+  }
 }
